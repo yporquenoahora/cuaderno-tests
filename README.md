@@ -10,7 +10,9 @@ App estática para preparar las pruebas de Inspección de Servicios Sociales de 
 
 ## Estudiar
 
-Elige bloque, modo y tema. También puedes mezclar todas las preguntas puntuables del bloque. En Estudio se corrige cada respuesta al pulsarla. En Simulacro puedes cambiar la selección hasta finalizar. El resultado muestra aciertos, fallos y preguntas en blanco, sin penalización por error.
+En **Configurar test**, elige uno o varios temas, mezcla un bloque o combina los dos. Indica cuántas preguntas quieres o deja el campo vacío para usar todas. Puedes elegir una penalización por fallo o escribir un valor personalizado. Puedes avanzar, volver atrás y cambiar tus respuestas hasta pulsar **Finalizar**. El resultado muestra aciertos, fallos y preguntas en blanco, junto con el porcentaje de aciertos, la puntuación neta, la nota estimada sobre 10 y el desglose por tema. También permite consultar la respuesta de la plantilla de cada pregunta.
+
+La puntuación neta es aciertos menos fallos por penalización. La nota es la puntuación neta dividida por el total de preguntas y multiplicada por 10, con un mínimo de cero. Las preguntas en blanco valen cero.
 
 Los fallos permanecen en el repaso hasta acertarlos. Puedes marcar preguntas para volver a ellas. El progreso y la última sesión se guardan en el almacenamiento local del navegador.
 
