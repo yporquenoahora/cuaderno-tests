@@ -381,9 +381,22 @@ function results() {
     const detail = el('details');
     const pick = session.answers[q.id];
     const status = pick === q.correct ? 'Correcta' : pick ? 'Incorrecta' : 'En blanco';
-    detail.append(el('summary', status + ' · Tema ' + q.theme + ' / ' + q.number + ' · ' + q.text),
-      el('p', 'Tu respuesta: ' + (pick ? pick.toUpperCase() + ' · ' + q.options[pick] : 'En blanco')),
-      el('p', 'Plantilla: ' + q.correct.toUpperCase() + ' · ' + q.options[q.correct]));
+    detail.append(el('summary', status + ' · Tema ' + q.theme + ' / ' + q.number + ' · ' + q.text));
+    const options = el('ul', '', 'solution-options');
+    for (const [key, value] of Object.entries(q.options)) {
+      const isCorrect = key === q.correct;
+      const isSelected = key === pick;
+      const style = isCorrect ? ' correct' : isSelected ? ' incorrect' : '';
+      const option = el('li', '', 'solution-option' + style);
+      option.append(el('strong', key.toUpperCase() + ' · '), el('span', value));
+      if (isCorrect || isSelected) {
+        const label = isCorrect && isSelected ? '✓ Correcta · Tu respuesta'
+          : isCorrect ? '✓ Correcta' : '✗ Tu respuesta';
+        option.append(el('span', label, 'solution-label'));
+      }
+      options.append(option);
+    }
+    detail.append(options);
     report.append(detail);
   }
   render(report);

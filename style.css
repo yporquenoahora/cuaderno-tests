@@ -82,3 +82,8 @@ summary{cursor:pointer}
 .topic-results caption{text-align:left;font-weight:750;margin:0 0 6px}
 .topic-results th,.topic-results td{text-align:left;border-bottom:1px solid var(--line);padding:8px 6px}
 .results>.actions{margin-bottom:12px}
+.solution-options{list-style:none;padding:0;margin:12px 0 4px;display:grid;gap:7px}
+.solution-option{border:1px solid var(--line);border-radius:10px;padding:10px 12px;line-height:1.45;overflow-wrap:anywhere}
+.solution-option.correct{background:#e0f0e7;border-color:#528573;color:#214e3b}
+.solution-option.incorrect{background:#faebe6;border-color:#ba7769;color:#7c3329}
+.solution-label{display:block;font-size:.82rem;font-weight:750;margin-top:4px}
